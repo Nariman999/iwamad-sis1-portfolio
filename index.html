@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nariman Bakitbekov - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['selector', '[data-theme="dark"]'],
+        }
+    </script>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #111827;
+            --card-bg: #f3f4f6;
+        }
+        [data-theme="dark"] {
+            --bg: #0b1220;
+            --fg: #e5e7eb;
+            --card-bg: #1e293b;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .custom-card {
+            background-color: var(--card-bg);
+        }
+        :focus-visible {
+            outline: 3px solid #3b82f6;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-[#0b1220]/80 border-b border-gray-200 dark:border-gray-800">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tight">Nariman.dev</a>
+            <div class="flex items-center gap-6">
+                <ul class="hidden md:flex gap-6 text-sm font-medium">
+                    <li><a href="#about" class="hover:text-blue-500 transition">About Me</a></li>
+                    <li><a href="#projects" class="hover:text-blue-500 transition">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-blue-500 transition">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" aria-label="Toggle Theme" class="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                    🌙 / ☀️ Theme
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 space-y-24">
+        <section id="about" class="grid md:grid-cols-2 gap-12 items-center pt-8">
+            <div class="space-y-6">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Hello, I'm Nariman Bakitbekov</h1>
+                <p class="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                    I am a student at KBTU studying Web and Mobile Application Development. I focus on building modern, responsive, and clean front-end web interfaces.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#projects" class="px-5 py-3 text-sm font-medium bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">View Projects</a>
+                    <a href="#contact" class="px-5 py-3 text-sm font-medium border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">Get in Touch</a>
+                </div>
+            </div>
+            <div class="custom-card p-8 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800">
+                <h2 class="text-xl font-semibold mb-4">My Skills</h2>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center gap-2">✅ HTML5, CSS3, JavaScript</li>
+                    <li class="flex items-center gap-2">✅ Tailwind CSS & Semantic HTML</li>
+                    <li class="flex items-center gap-2">✅ Git & GitHub Workflow</li>
+                    <li class="flex items-center gap-2">✅ Swift / iOS Development Basics</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="space-y-8 pt-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-bold">My Projects</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Practical works built during coursework</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article class="custom-card p-6 rounded-xl border border-gray-200 dark:border-gray-800 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">HTML Portfolio</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">A personal web page layout built using semantic tags and clean CSS fundamentals.</p>
+                    </div>
+                    <a href="https://github.com/n-bakitbekov" target="_blank" class="text-sm font-medium text-blue-500 hover:underline">View Repository &rarr;</a>
+                </article>
+
+                <article class="custom-card p-6 rounded-xl border border-gray-200 dark:border-gray-800 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">JavaScript Scripts</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Interactive scripts focusing on DOM manipulation, event handling, and logical operations.</p>
+                    </div>
+                    <a href="https://github.com/n-bakitbekov" target="_blank" class="text-sm font-medium text-blue-500 hover:underline">View Repository &rarr;</a>
+                </article>
+
+                <article class="custom-card p-6 rounded-xl border border-gray-200 dark:border-gray-800 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Swift Playgrounds</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Solutions for collections, arrays, and set operations designed for iOS applications.</p>
+                    </div>
+                    <a href="https://github.com/n-bakitbekov" target="_blank" class="text-sm font-medium text-blue-500 hover:underline">View Repository &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="max-w-xl mx-auto space-y-8 pt-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-bold">Contact Me</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Send me a message or inquiry</p>
+            </div>
+
+            <form id="contact-form" novalidate class="custom-card p-8 rounded-2xl border border-gray-200 dark:border-gray-800 space-y-6">
+                <div class="space-y-2">
+                    <label for="name" class="block text-sm font-medium">Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2.5 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none">
+                </div>
+
+                <div class="space-y-2">
+                    <label for="email" class="block text-sm font-medium">Email Address</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2.5 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none">
+                </div>
+
+                <div class="space-y-2">
+                    <label for="message" class="block text-sm font-medium">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2.5 text-sm rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none"></textarea>
+                </div>
+
+                <div id="form-feedback" class="text-sm font-medium hidden"></div>
+
+                <button type="submit" class="w-full py-3 text-sm font-medium bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-200 dark:border-gray-800 mt-20 py-8 text-center text-sm text-gray-500">
+        <p>&copy; 2026 Nariman Bakitbekov. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const html = document.documentElement;
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', () => {
+            html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
+        });
+
+        const form = document.getElementById('contact-form');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const feedback = document.getElementById('form-feedback');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            feedback.classList.remove('hidden', 'text-red-500', 'text-green-500');
+
+            if (!nameInput.value.trim()) {
+                feedback.textContent = 'Please enter your name!';
+                feedback.classList.add('text-red-500');
+                nameInput.focus();
+                return;
+            }
+
+            if (!emailInput.value.trim()) {
+                feedback.textContent = 'Please enter your email address!';
+                feedback.classList.add('text-red-500');
+                emailInput.focus();
+                return;
+            }
+
+            const emailValue = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailValue)) {
+                feedback.textContent = 'Invalid email format (e.g., user@example.com)!';
+                feedback.classList.add('text-red-500');
+                emailInput.focus();
+                return;
+            }
+
+            if (!messageInput.value.trim()) {
+                feedback.textContent = 'Message field cannot be empty!';
+                feedback.classList.add('text-red-500');
+                messageInput.focus();
+                return;
+            }
+
+            feedback.textContent = 'Message sent successfully!';
+            feedback.classList.add('text-green-500');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
