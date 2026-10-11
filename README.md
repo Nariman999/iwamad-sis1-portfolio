@@ -1,7 +1,7 @@
 # IWaMAD SIS 1 Portfolio
 
 ## Live Pages URL
-https://n-bakitbekov.github.io/iwamad-sis1-portfolio/
+https://Nariman999.github.io/iwamad-sis1-portfolio/
 
 ## About the site
 This website is my personal portfolio showcasing my background, my completed projects from the course, and a contact section. The site is built using semantic HTML5 and styled with Tailwind CSS to ensure a modern and clean user interface.
